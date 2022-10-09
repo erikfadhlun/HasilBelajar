@@ -1,0 +1,18 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "nodejs backend",
+  "main": "index.js",
+  "scripts": {
+    "nyala": "nodemon index.js"
+  },
+  "keywords": [
+    "kontol"
+  ],
+  "author": "erik_fadhlun",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "rupiah-format": "^1.0.0"
+  }
+}

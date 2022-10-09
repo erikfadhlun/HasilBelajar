@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Saklar Lampu</title>
+</head>
+
+
+<body>
+    <!-- NAVBAR -->
+        <div>
+            <ul class="flex flex-row justify-center items-center">
+                <li class="li-navbar">
+                    <a href="index.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 white:hover:bg-gray-800 white:hover:text-gray-300">Home</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="Ruang Keluarga.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 white:hover:bg-gray-800 white:hover:text-gray-300">Ruang Keluarga</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="Ruang Tamu.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 white:hover:bg-gray-800 white:hover:text-gray-300">Ruang Tamu</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="Ruang Makan.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 white:hover:bg-gray-800 white:hover:text-gray-300">Ruang Makan</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 white:hover:bg-gray-800 white:hover:text-gray-300">Kamar Mandi</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="Kamar Tidur.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 white:hover:bg-gray-800 white:hover:text-gray-300">Kamar Tidur</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="Garasi.html" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 white:hover:bg-gray-800 white:hover:text-gray-300">Garasi</a>
+                </li>
+            </ul>
+        </div>
+    <!-- NAVBAR END -->
+
+    
+    
+<div class="flex justify-center items-center min-h-screen w-full bg-gray-800 gap-4">
+    <!-- Toggle Buat Nyala Semua -->
+    <label class="relative inline-block h-8 w-16">
+        <input type="checkbox" id="toggle4" class="peer sr-only peer" onchange="saklarall()"/>
+        <span
+          class="absolute inset-0 cursor-pointer rounded-full bg-gray-200 transition duration-200 before:absolute before:bottom-1 before:left-1 before:h-6 before:w-6 before:rounded-full before:bg-white before:transition before:duration-200 before:shadow-sm peer-checked:bg-blue-500 peer-checked:before:translate-x-8 peer-focus:ring"
+        ></span>
+      </label>      
+
+    <!-- Lampu 1 -->
+    <div class="flex flex-col gap-2 items-center">
+        <img src="asset/images/off.gif" alt="" id="lampu1" />
+        <label class="relative inline-block h-8 w-16">
+            <input type="checkbox" id="default-toggle1" class="peer sr-only peer" onchange="saklar()"/>
+            <span
+              class="absolute inset-0 cursor-pointer rounded-full bg-gray-200 transition duration-200 before:absolute before:bottom-1 before:left-1 before:h-6 before:w-6 before:rounded-full before:bg-white before:transition before:duration-200 before:shadow-sm peer-checked:bg-blue-500 peer-checked:before:translate-x-8 peer-focus:ring"
+            ></span>
+          </label>              
+    </div>
+
+    <!-- Lampu 2 -->
+    <div  class="flex flex-col gap-2 items-center">
+        <img src="asset/images/off.gif" alt="" id="lampu2" />
+        <label class="relative inline-block h-8 w-16">
+            <input type="checkbox" id="default-toggle2" class="peer sr-only peer" onchange="saklar()"/>
+          
+            <span
+              class="absolute inset-0 cursor-pointer rounded-full bg-gray-200 transition duration-200 before:absolute before:bottom-1 before:left-1 before:h-6 before:w-6 before:rounded-full before:bg-white before:transition before:duration-200 before:shadow-sm peer-checked:bg-blue-500 peer-checked:before:translate-x-8 peer-focus:ring"
+            ></span>
+          </label>           
+
+    </div>
+
+    <!-- Lampu 3 -->
+    <div  class="flex flex-col gap-2 items-center">
+        <img src="asset/images/off.gif" alt="" id="lampu3" />
+        <label class="relative inline-block h-8 w-16">
+            <input type="checkbox" id="default-toggle3" class="peer sr-only peer" onchange="saklar()"/>
+          
+            <span
+              class="absolute inset-0 cursor-pointer rounded-full bg-gray-200 transition duration-200 before:absolute before:bottom-1 before:left-1 before:h-6 before:w-6 before:rounded-full before:bg-white before:transition before:duration-200 before:shadow-sm peer-checked:bg-blue-500 peer-checked:before:translate-x-8 peer-focus:ring"
+            ></span>
+          </label>           
+    </div>
+
+</div>
+
+<!-- Ini adalah script js kita -->
+<script src="saklar.js" type="application/javascript"></script>
+</body>
+
+</html>

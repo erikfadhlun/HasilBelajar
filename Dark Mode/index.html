@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"/>
+    <title>DARK MODE</title>
+    
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a onclick="restart()" id="home">HOME</a>
+            <a onclick="darkMode()" id="mode">Blue Mode</a>
+            <a onclick="sangar()" id="sangar">Mode Sangar</a>
+        </nav>
+        <h1>INFOO MASSZEHH</h1>
+        <p class="info" id="info"></p>
+
+    </div>
+
+    <!-- LOGIC -->
+    <script>
+        let body = document.body;
+        const darkLimit = 5;
+        let darkCounter = 0;
+        let darkRemainingLeft;
+        let info = document.getElementById("info");
+        let mode = document.getElementById("mode");
+        let home = document.getElementById("home");
+        let modeDark = document.getElementById("modeDark");
+        let lightMode = document.getElementById("lightMode");
+        let sangar = document.getElementById("sangar");
+
+        function darkMode() {
+            if (mode.click = modeDark){
+                mode.click = lightMode
+                lightMode = true
+                modeDark = false
+                mode.textContent = "Blue Mode";
+            } else {
+                modeDark = true
+                mode.textContent = "Light Mode"
+            }
+            if (darkRemainingLeft == 1) {
+                info.textContent = "Jatah DarkKOMTOL SUDAH habis"
+                mode.style.display= "none";
+                home.textContent = "ULANG ANJING"
+                return;
+            }
+            darkCounter += 1;
+            darkRemainingLeft = darkLimit - darkCounter;
+
+            //render ke info element
+            info.textContent = `DarkKontol dipakai sebanyak ${darkCounter} kali, tersisa ${darkRemainingLeft} kali`;
+
+            body.classList.toggle("mode");
+        } 
+
+
+        function restart() {
+            location.reload();
+        }
+
+    </script>
+</body>
+</html>
